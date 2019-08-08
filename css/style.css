@@ -105,8 +105,7 @@ h4 {
 }
 
 .work ul {
-  display: flex;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 /* Module Rules */
@@ -173,7 +172,7 @@ article p {
     margin-bottom: 1em;
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
 .main-nav {
   display: flex;
   height: 3em;
@@ -212,7 +211,9 @@ article p {
 }
 
 .work ul {
+  display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .works {
