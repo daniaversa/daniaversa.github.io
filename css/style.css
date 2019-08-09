@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  box-sizing: border-box;
 }
 
 h1, h2, h3, aside p {
@@ -32,6 +33,11 @@ h2, h4, aside p {
 h3 {
   padding-bottom: 0.5em;
   font-size: 1.8em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 /* Layout Rules */
@@ -104,7 +110,7 @@ h4 {
   text-align: center;
 }
 
-.work ul {
+#work ul {
   width: 100%;
 }
 
@@ -147,6 +153,10 @@ article p {
 
 .works img {
   width: 100%;
+}
+
+.works img:hover {
+  border: 5px solid #640064;
 }
 
 .highlight {
@@ -210,7 +220,7 @@ article p {
   margin: 0 auto;
 }
 
-.work ul {
+#work ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

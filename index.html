@@ -21,11 +21,11 @@
     <header>
       <nav>
         <ul class="main-nav">
-          <li>Home</li>
-          <li class="highlight"><a href=""></a>Hire Me</li>
-          <li>About</li>
-          <li>My Work</li>
-          <li>Contact</li>
+          <li><a href="#">Home</a></li>
+          <li class="highlight"><a href="mailto:aversa.dev@gmail.com">Hire Me</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">My Work</a></li>
+          <li><a href="mailto:aversa.dev@gmail.com">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -49,9 +49,9 @@
         </ul>
       </aside>
       <!-- Aux Container -->
-      <div class="aux-container">
+      <main class="aux-container">
         <!-- Hero -->
-        <main>
+        <section class="hero">
           <div class="logo-container">
             <div class="heading">
               <h1>Dani Aversa</h1>
@@ -66,35 +66,41 @@
             <source srcset="img/code-md.jpg" media="(min-width: 600px)" />
             <img src="img/code-sm.jpg" alt="HTML code" class="hero-img">
           </picture>
-        </main>
+        </section>
         <!-- About Me -->
-        <article class="about">
+        <article class="about" id="about">
           <h3>About Me</h3>
           <img src="img/daniaversa.jpg" alt="Dani Aversa in Dublin" class="portrait">
           <p>Hi! My name is Daniel Aversa, but everyone calls me Dani. I'm a brazilian / portuguese front-end developer devoted to good practices and always seeking to improve! I'm currently based in Dublin, Ireland. My hobbies include sports, gaming and reading. I'm currently open for hiring and would love to hear from you. Please feel free to contact me for more information.</p>
         </article>
         <!-- Work -->
-        <section class="work">
+        <section id="work">
           <h3>Featured Work</h3>
           <ul>
             <li class="works">
-              <img src="img/travel-sm.jpg" srcset="img/travel-sm.jpg 500w, img/travel-md.jpg 1000w, img/travel-hd.jpg 1500w" sizes="(min-width: 600px) 84vw, 30vw" alt="Traveling Assistant">
-              <h4>Traveling Assistant WebApp</h4>
+              <a href="#">
+                <img src="img/travel-sm.jpg" srcset="img/travel-sm.jpg 500w, img/travel-md.jpg 1000w, img/travel-hd.jpg 1500w" sizes="(min-width: 600px) 84vw, 30vw" alt="Traveling Assistant">
+                <h4>Traveling Assistant WebApp</h4>
+              </a>
             </li>
             <li class="works">
-              <img src="img/dice-sm.jpg" srcset="img/dice-sm.jpg 500w, img/dice-md.jpg 1000w, img/dice-hd.jpg 1500w" sizes="(min-width: 600px) 84vw, 30vw" alt="Twenty-sided dice">
-              <h4>Initiative Tracker WebApp</h4>
+              <a href="#">
+                <img src="img/dice-sm.jpg" srcset="img/dice-sm.jpg 500w, img/dice-md.jpg 1000w, img/dice-hd.jpg 1500w" sizes="(min-width: 600px) 84vw, 30vw" alt="Twenty-sided dice">
+                <h4>Initiative Tracker WebApp</h4>
+              </a>
             </li>
             <li class="works">
-              <img src="img/tap-sm.jpg" srcset="img/tap-sm.jpg 500w, img/tap-md.jpg 1000w, img/tap-hd.jpg 1500w" sizes="(min-width: 600px) 30vw, 84vw" alt="Trip on Tap logo">
-              <h4>Trip on Tap</h4>
+              <a href="">
+                <img src="img/tap-sm.jpg" srcset="img/tap-sm.jpg 500w, img/tap-md.jpg 1000w, img/tap-hd.jpg 1500w" sizes="(min-width: 600px) 30vw, 84vw" alt="Trip on Tap logo">
+                <h4>Trip on Tap</h4>
+              </a>
             </li>
           </ul>
         </section>
-      </div>
+      </main>
       <!-- Footer -->
       <footer class="copyright">
-        <p>Copyright 2019 - <a href="#">Dani Aversa</a></p>
+        <p>Copyright 2019 - <a href="#" class="highlight">Dani Aversa</a></p>
       </footer>
     </div>
   </body>
