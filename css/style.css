@@ -44,11 +44,24 @@ a {
 /* Layout Rules */
 header {
   width: 100%;
-  height: 3em;
+  height: 4em;
 }
 
 .main-nav {
-  display: none;
+  display: flex;
+  height: 4em;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 2%;
+}
+
+.main-nav a {
+  padding: 1.5em 0.6em;
+  text-align: center;
+}
+
+.main-nav a:not(:last-of-type) {
+  border-right: 1px white solid;
 }
 
 .container {
@@ -91,6 +104,15 @@ header {
 
 .black {
   background-color: black;
+}
+
+#work ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.works {
+  width: 100%;
 }
 
 footer {
@@ -160,6 +182,10 @@ article p {
   color: rgba(180, 0, 180, 1);
 }
 
+footer p {
+  font-size: 0.8em;
+}
+
 /* Media Queries */
 @media screen and (min-width: 400px) {
   .logo img, .heading {
@@ -182,15 +208,15 @@ article p {
 
 @media screen and (min-width: 800px) {
   .main-nav {
-    display: flex;
-    height: 3em;
     justify-content: flex-end;
-    align-items: center;
-    padding-right: 1em;
   }
 
   .main-nav li {
     padding: 0.5em 1.2em 0.5em 0.5em;
+  }
+
+  .main-nav a {
+    border-right: 0;
   }
 
   .container {
@@ -219,7 +245,6 @@ article p {
   }
 
   #work ul {
-    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
