@@ -6,23 +6,23 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="modal-background hide character">
-      <div class="modal">
-        <h1>Choose your hero!</h1>
-        <div class="heroes">
-          <img src="images/char-boy.png" alt="Boy" id="boy">
-          <img src="images/char-cat-girl.png" alt="Cat Girl" id="cat-girl">
-          <img src="images/char-horn-girl.png" alt="Horn Girl" id="horn-girl">
-          <img src="images/char-pink-girl.png" alt="Pink Girl" id="pink-girl">
-          <img src="images/char-princess-girl.png" alt="Princess" id="princess-girl">
+
+    <div class="wrapper">
+        <div class="game"></div>
+        <div class="score-panel">
+            <h1>Classic Arcade Game Clone</h1>
+            <p class="highlight">Lives left: <span class="lives">3</span></p>
+            <p class="highlight">Score: <span class="score">0</span></p>
+            <p class="highlight">High Score: <span class="high-score">0</span></p>
+            <p>Help this girl go for a swim in the river. Be careful of the bugs, they bite!!</p>
+            <p>Use the arrow keys to move!</p>
         </div>
-      </div>
     </div>
 
-    <div class="modal-background hide winner">
+    <div class="modal-background hide loser">
       <div class="modal">
-        <h1>You won!</h1>
-        <p>You reached the river for a refreshing summer swimming day!</p>
+        <h1>Game Over</h1>
+        <p>You crossed to the river <span class="score-final">0</span> times! Your high score was <span class="high-final">0</span>.</p>
         <button id="replay">Play Again</button>
       </div>
     </div>

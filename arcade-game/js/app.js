@@ -1,3 +1,13 @@
+// Score panel variables
+let lives = 3,
+    livesPanel = document.querySelector('.lives'),
+    score = 0,
+    scorePanel = document.querySelector('.score'),
+    highScore = 0,
+    highPanel = document.querySelector('.high-score'),
+    scoreFinal = document.querySelector('.score-final'),
+    highFinal = document.querySelector('.high-final');
+
 
 // Enemies our player must avoid
 const Enemy = function(x, y, speed) {
@@ -29,8 +39,9 @@ Enemy.prototype.update = function(dt) {
       this.x += this.speed  * dt;
       // Increment x by (Speed * dt)
     } else {
-      // Reset position
+      // Reset position and randomize speed for next cross
       this.x = this.startMove;
+      this.speed = 120 + Math.floor(Math.random() * 500);
     }
 };
 
@@ -61,12 +72,20 @@ class Hero {
                 // Check collision (x and y)
                 for (let enemy of allEnemies) {
                   if (this.y === enemy.y && (enemy.x + enemy.hor/1.8 > this.x && enemy.x < this.x + this.hor/1.8)) {
+                    lives--;
+                    livesPanel.innerHTML = lives;
                     this.reset();
                   }
                 }
                 // Check win
                 if (this.y === -23) {
-                  this.isWinner = true;
+                  score++;
+                  scorePanel.innerHTML = score;
+                  if (score > highScore) {
+                    highScore = score;
+                    highPanel.innerHTML = highScore;
+                  }
+                  this.reset();
                 }
             }
             // render

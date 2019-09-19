@@ -21,21 +21,25 @@ const Engine = (function(global) {
     let doc = global.document,
         win = global.window,
         canvas = doc.createElement('canvas'),
+        gameWindow = document.querySelector('.game'),
         ctx = canvas.getContext('2d'),
         lastTime,
         id;
 
-        const modalWinner = document.querySelector('.winner');
+        const modalLoser = document.querySelector('.loser');
         const replay = document.querySelector('#replay');
 
     canvas.width = 505;
     canvas.height = 606;
-    doc.body.appendChild(canvas);
+    gameWindow.appendChild(canvas);
 
     replay.addEventListener('click', function() {
-      modalWinner.classList.toggle('hide');
+      modalLoser.classList.toggle('hide');
       player.reset();
-      player.isWinner = false;
+      lives = 3;
+      livesPanel.innerHTML = lives;
+      score = 0;
+      scorePanel.innerHTML = score;
       id = win.requestAnimationFrame(main);
     });
 
@@ -66,9 +70,11 @@ const Engine = (function(global) {
         /* Use the browser's requestAnimationFrame function to call this
          * function again as soon as the browser is able to draw another frame.
          */
-      if (player.isWinner === true) {
+      if (lives === 0) {
+        scoreFinal.innerHTML = score;
+        highFinal.innerHTML = highScore;
         win.cancelAnimationFrame(id);
-        modalWinner.classList.toggle('hide');
+        modalLoser.classList.toggle('hide');
       } else {
         id = win.requestAnimationFrame(main);
       }
