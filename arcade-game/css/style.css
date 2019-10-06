@@ -1,105 +1,105 @@
 /* Global Rules */
 body {
-    text-align: center;
-    font-family: 'Press Start 2P', cursive;
+		text-align: center;
+		font-family: 'Press Start 2P', cursive;
 }
 
 h1 {
-  font-size: 2em;
-  color: #0275d8;
+	font-size: 2em;
+	color: #0275d8;
 }
 
 button {
-  font-size: 100%;
-  font-family: inherit;
-  border: 0;
+	font-size: 100%;
+	font-family: inherit;
+	border: 0;
 }
 
 .highlight {
-  font-size: 1.2em;
+	font-size: 1.2em;
 }
 
 /* Layout Rules */
 .wrapper {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
 }
 
 .game {
-  width: 505px;
-  padding: 0 5%;
+	width: 505px;
+	padding: 0 5%;
 }
 
 .score-panel {
-  width: 50%;
-  padding: 10% 5% 10% 0;
-  background-color: #fff;
+	width: 50%;
+	padding: 10% 5% 10% 0;
+	background-color: #fff;
 }
 
 /* Animations */
 
-  /* dead - flashes the score panel red when collisions occur */
+	/* dead - flashes the score panel red when collisions occur */
 .dead {
-  animation-name: dead;
-  animation-duration: 0.5s;
+	animation-name: dead;
+	animation-duration: 0.5s;
 }
 
 @keyframes dead {
-  from {background-color: #fff;}
-  to {background-color: #d9534f;}
+	from {background-color: #fff;}
+	to {background-color: #d9534f;}
 }
 
-  /* win - flashes the panel green on successful crosses */
-  .win {
-    animation-name: win;
-    animation-duration: 0.5s;
-  }
+	/* win - flashes the panel green on successful crosses */
+	.win {
+		animation-name: win;
+		animation-duration: 0.5s;
+	}
 
-  @keyframes win {
-    from {background-color: #fff;}
-    to {background-color: #5cb85c;}
-  }
+	@keyframes win {
+		from {background-color: #fff;}
+		to {background-color: #5cb85c;}
+	}
 
 /* Modal Styles */
 .modal-background {
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.4);
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.4);
 }
 
 .modal {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 50%;
-  height: 60%;
-  margin: 8% auto;
-  padding: 20px;
-  background: #fff;
-  overflow: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	height: 60%;
+	margin: 8% auto;
+	padding: 20px;
+	background: #fff;
+	overflow: auto;
 }
 
 .hide {
-  display: none;
+	display: none;
 }
 
 .replay {
-  width: 30%;
-  background-color: #0275d8;
-  color: #fff;
-  padding: 5px;
-  margin: 20px auto;
-  cursor: pointer;
-  border: 2px solid #0275d8;
+	width: 30%;
+	background-color: #0275d8;
+	color: #fff;
+	padding: 5px;
+	margin: 20px auto;
+	cursor: pointer;
+	border: 2px solid #0275d8;
 }
 
 .replay:hover {
-  background-color: #fff;
-  color: #0275d8;
+	background-color: #fff;
+	color: #0275d8;
 }
